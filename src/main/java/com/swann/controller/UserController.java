@@ -10,6 +10,12 @@ public class UserController {
         return "Get user id = " + userid;
     }
 
+    @GetMapping
+    public String getUsers(@RequestParam(value = "page") int page,
+                           @RequestParam(value = "limit") int limit) {
+        return "Get users called page = " + page + "limit = " + limit;
+    }
+
     @PostMapping
     public String postUser() {
         return "POST user";
