@@ -11,8 +11,8 @@ public class UserController {
     }
 
     @GetMapping
-    public String getUsers(@RequestParam(value = "page") int page,
-                           @RequestParam(value = "limit") int limit) {
+    public String getUsers(@RequestParam(value = "page", defaultValue = "1") int page,
+                           @RequestParam(value = "limit", defaultValue = "10") int limit) {
         return "Get users called page = " + page + "limit = " + limit;
     }
 
